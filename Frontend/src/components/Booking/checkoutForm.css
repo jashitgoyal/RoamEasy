@@ -1,0 +1,65 @@
+.pay-now-button {
+    background-color: #5d5cba; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 15px; /* Make the button rounded */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    margin-top: 2rem;
+  }
+  
+  .pay-now-button:hover {
+    background-color: 4e4caf;
+    opacity: 0.8; /* Darker green on hover */
+  }
+  
+  .pay-now-button:disabled {
+    background-color: #cccccc; /* Grey background for disabled state */
+    cursor: not-allowed; /* Disabled cursor */
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  #card-number, #card-expiry, #card-cvc {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  #card-number:focus, #card-expiry:focus, #card-cvc:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+  
+  .pay-now-button {
+    background-color:  #5d5cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pay-now-button:hover {
+    background-color:  #5d5cba;
+    opacity: 0.8;
+  }
+  
+  .pay-now-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
