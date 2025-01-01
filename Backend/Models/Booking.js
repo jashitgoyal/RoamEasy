@@ -32,13 +32,13 @@ const bookingSchema = new mongoose.Schema(
     },
     hotelType: {
       type: String,
-      enum: ['fiveStar', 'threeStar'],
-      default: 'fiveStar',
+      enum: ["fiveStar", "threeStar"],
+      default: "fiveStar",
     },
     flightClass: {
       type: String,
-      enum: ['economy', 'business'],
-      default: 'economy',
+      enum: ["economy", "business"],
+      default: "economy",
     },
   },
   { timestamps: true }

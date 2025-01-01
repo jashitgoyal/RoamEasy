@@ -16,12 +16,12 @@ const tourSchema = new mongoose.Schema(
       required: true,
     },
     days: {
-      type: Number, 
+      type: Number,
       required: true,
     },
     photo: {
       type: String,
-      required: [true, 'Photo URL is required'],
+      required: [true, "Photo URL is required"],
     },
     desc: {
       type: String,
@@ -51,26 +51,26 @@ const tourSchema = new mongoose.Schema(
     hotelOptions: {
       fiveStar: {
         type: Number,
-        required: [true, '5-star hotel price is required'],
-        default: 0 
+        required: [true, "5-star hotel price is required"],
+        default: 0,
       },
       threeStar: {
         type: Number,
-        required: [true, '3-star hotel price is required'],
-        default: 0
+        required: [true, "3-star hotel price is required"],
+        default: 0,
       },
     },
 
     flightOptions: {
       economy: {
         type: Number,
-        required: [true, 'Economy flight price is required'],
-        default: 0
+        required: [true, "Economy flight price is required"],
+        default: 0,
       },
       business: {
         type: Number,
-        required: [true, 'Business class flight price is required'],
-        default: 0
+        required: [true, "Business class flight price is required"],
+        default: 0,
       },
     },
   },

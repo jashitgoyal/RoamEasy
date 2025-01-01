@@ -6,13 +6,11 @@ export const createUser = async (req, res) => {
   try {
     const savedUser = await newUser.save();
 
-    res
-      .status(200)
-      .json({
-        success: true,
-        message: "Successfully created",
-        data: savedUser,
-      });
+    res.status(200).json({
+      success: true,
+      message: "Successfully created",
+      data: savedUser,
+    });
   } catch (error) {
     res
       .status(500)
@@ -32,13 +30,11 @@ export const updateUser = async (req, res) => {
       { new: true }
     );
 
-    res
-      .status(200)
-      .json({
-        success: true,
-        message: "Successfully updated",
-        data: updatedUser,
-      });
+    res.status(200).json({
+      success: true,
+      message: "Successfully updated",
+      data: updatedUser,
+    });
   } catch (error) {
     res.status(500).json({ success: false, message: "Failed to update" });
   }

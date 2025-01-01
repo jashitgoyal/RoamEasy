@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/home.css";
 import { Container, Row, Col } from "reactstrap";
-import SearchBar from "./../shared/SearchBar";
+import SearchBar from "../shared/SearchBar";
 import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 
 const Home = () => {
