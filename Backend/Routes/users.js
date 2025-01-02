@@ -13,5 +13,5 @@ router.put("/:id", verifyUser, updateUser);
 router.delete("/:id", verifyUser, deleteUser);
 router.get("/:id", verifyUser, getSingleUser);
 router.get("/", verifyAdmin, getAllUser);
-cont = CheckoutForm;
+
 export default router;
