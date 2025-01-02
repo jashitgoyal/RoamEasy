@@ -12,10 +12,7 @@ import bookingRoute from "./Routes/bookings.js";
 dotenv.config();
 const app = express();
 const port = process.env.PORT;
-const corsOptions = {
-  origin: true,
-  credentials: true,
-};
+const corsOptions = {};
 
 mongoose.set("strictQuery", false);
 const connect = async () => {
