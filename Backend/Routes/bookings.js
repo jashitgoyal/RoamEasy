@@ -6,8 +6,7 @@ import {
   getstripeasync,
   sendBookingDetails,
 } from "../Controllers/bookingController.js";
-import { verifyAdmin, verifyToken, verifyUser } from "../utils/verifyToken.js";
-import { sendBookingEmail } from "../utils/sendEmail.js";
+import { verifyAdmin, verifyToken, verifyUser } from "../Utils/verifyToken.js";
 
 const router = express.Router();
 
