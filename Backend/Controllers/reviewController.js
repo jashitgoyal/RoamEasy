@@ -1,5 +1,5 @@
-import Tour from "../models/Tour.js";
-import Review from "../models/Review.js";
+import Tour from "../Models/Tour.js";
+import Review from "../Models/Review.js";
 
 export const createReview = async (req, res) => {
   const tourId = req.params.tourId;

@@ -6,12 +6,12 @@ import {
   updateUser,
 } from "../Controllers/userController.js";
 
-import { verifyAdmin, verifyUser } from "../utils/verifyToken.js";
+import { verifyAdmin, verifyUser } from "../Utils/verifyToken.js";
 
 const router = express.Router();
 router.put("/:id", verifyUser, updateUser);
 router.delete("/:id", verifyUser, deleteUser);
 router.get("/:id", verifyUser, getSingleUser);
 router.get("/", verifyAdmin, getAllUser);
-
+cont = CheckoutForm;
 export default router;

@@ -1,6 +1,6 @@
-import Booking from "../models/Booking.js";
-import { sendBookingEmail } from "../utils/sendEmail.js";
-import { verifyToken } from "../utils/verifyToken.js";
+import Booking from "../Models/Booking.js";
+import { sendBookingEmail } from "../Utils/sendEmail.js";
+import { verifyToken } from "../Utils/verifyToken.js";
 import Stripe from "stripe";
 // Initialize Stripe
 const stripe = new Stripe(
@@ -105,12 +105,10 @@ export const getBooking = async (req, res) => {
           .status(200)
           .json({ success: true, message: "Successful!", data: booking });
       } else {
-        res
-          .status(404)
-          .json({
-            success: false,
-            message: "Booking not found or unauthorized access!",
-          });
+        res.status(404).json({
+          success: false,
+          message: "Booking not found or unauthorized access!",
+        });
       }
     } catch (error) {
       res

@@ -1,4 +1,4 @@
-import Tour from "../models/Tour.js";
+import Tour from "../Models/Tour.js";
 
 export const createTour = async (req, res) => {
   console.log("in create tour", req.body);
@@ -6,13 +6,11 @@ export const createTour = async (req, res) => {
 
   try {
     const savedTour = await newTour.save();
-    res
-      .status(200)
-      .json({
-        success: true,
-        message: "Successfully created",
-        data: savedTour,
-      });
+    res.status(200).json({
+      success: true,
+      message: "Successfully created",
+      data: savedTour,
+    });
   } catch (error) {
     res
       .status(500)
@@ -29,13 +27,11 @@ export const updateTour = async (req, res) => {
       { $set: req.body },
       { new: true }
     );
-    res
-      .status(200)
-      .json({
-        success: true,
-        message: "Successfully updated",
-        data: updatedTour,
-      });
+    res.status(200).json({
+      success: true,
+      message: "Successfully updated",
+      data: updatedTour,
+    });
   } catch (error) {
     res.status(500).json({ success: false, message: "Failed to update" });
   }
@@ -74,14 +70,12 @@ export const getAllTour = async (req, res) => {
       .skip(page * 8)
       .limit(8);
 
-    res
-      .status(200)
-      .json({
-        success: true,
-        count: tours.length,
-        message: "Successfully retrieved",
-        data: tours,
-      });
+    res.status(200).json({
+      success: true,
+      count: tours.length,
+      message: "Successfully retrieved",
+      data: tours,
+    });
   } catch (error) {
     res.status(404).json({ success: false, message: "Not Found" });
   }
