@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 const corsOptions = {
-  origin: true,
+  origin: "https://roameasy-frontend.onrender.com", // Allow your frontend
   credentials: true,
 };
 
@@ -27,6 +27,7 @@ const connect = async () => {
 
     console.log("MongoDB connected");
   } catch (error) {
+    console.log(error);
     console.log("MongoDB connected failed");
   }
 };

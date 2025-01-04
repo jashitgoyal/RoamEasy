@@ -1,9 +1,8 @@
 import User from "../Models/User.js";
 
 export const createUser = async (req, res) => {
-  const newUser = new User(req.body);
-
   try {
+    const newUser = new User(req.body);
     const savedUser = await newUser.save();
 
     res.status(200).json({
@@ -11,10 +10,12 @@ export const createUser = async (req, res) => {
       message: "Successfully created",
       data: savedUser,
     });
+    console.log("Successfully created");
   } catch (error) {
+    console.log("Failed to create. Try again!", error);
     res
       .status(500)
-      .json({ success: true, message: "Failed to create. Try again!" });
+      .json({ success: false, message: "Failed to create. Try again!" });
   }
 };
 
