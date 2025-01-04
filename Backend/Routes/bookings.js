@@ -13,7 +13,7 @@ const router = express.Router();
 router.post("/", createBooking);
 router.post("/send-mail", sendBookingDetails);
 router.post("/payment-intent", getstripeasync);
-router.get("/:id", verifyUser, getBooking);
+router.get("/:id", verifyToken, verifyUser, getBooking);
 router.get("/", verifyAdmin, getAllBooking);
 
 export default router;
